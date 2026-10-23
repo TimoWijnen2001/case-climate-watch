@@ -1,2 +1,4 @@
 ClimateData
 .venv
+climate_watch_backup.sql
+test.ipynb
