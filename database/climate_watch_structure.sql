@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 23 okt 2026 om 10:33
+-- Gegenereerd op: 23 okt 2026 om 12:43
 -- Serverversie: 10.4.32-MariaDB
 -- PHP-versie: 8.2.12
 
@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `globallandtemperaturesbycity` (
-  `dt` date NOT NULL,
-  `AverageTemperature` float NOT NULL,
-  `AverageTemperatureUncertainty` float NOT NULL,
-  `City` varchar(50) NOT NULL,
-  `Country` varchar(50) NOT NULL,
-  `Latitude` varchar(6) NOT NULL,
-  `Longitude` varchar(6) NOT NULL
+  `dt` date DEFAULT NULL,
+  `AverageTemperature` float DEFAULT NULL,
+  `AverageTemperatureUncertainty` float DEFAULT NULL,
+  `City` varchar(50) DEFAULT NULL,
+  `Country` varchar(50) DEFAULT NULL,
+  `Latitude` varchar(6) DEFAULT NULL,
+  `Longitude` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -44,10 +44,10 @@ CREATE TABLE `globallandtemperaturesbycity` (
 --
 
 CREATE TABLE `globallandtemperaturesbycountry` (
-  `dt` date NOT NULL,
-  `AverageTemperature` float NOT NULL,
-  `AverageTemperatureUncertainty` float NOT NULL,
-  `Country` varchar(50) NOT NULL
+  `dt` date DEFAULT NULL,
+  `AverageTemperature` float DEFAULT NULL,
+  `AverageTemperatureUncertainty` float DEFAULT NULL,
+  `Country` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -57,13 +57,13 @@ CREATE TABLE `globallandtemperaturesbycountry` (
 --
 
 CREATE TABLE `globallandtemperaturesbymajorcity` (
-  `dt` date NOT NULL,
-  `AverageTemperature` float NOT NULL,
-  `AverageTemperatureUncertainty` float NOT NULL,
-  `City` varchar(50) NOT NULL,
-  `Country` varchar(50) NOT NULL,
-  `Latitude` varchar(6) NOT NULL,
-  `Longitude` varchar(6) NOT NULL
+  `dt` date DEFAULT NULL,
+  `AverageTemperature` float DEFAULT NULL,
+  `AverageTemperatureUncertainty` float DEFAULT NULL,
+  `City` varchar(50) DEFAULT NULL,
+  `Country` varchar(50) DEFAULT NULL,
+  `Latitude` varchar(6) DEFAULT NULL,
+  `Longitude` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -73,11 +73,11 @@ CREATE TABLE `globallandtemperaturesbymajorcity` (
 --
 
 CREATE TABLE `globallandtemperaturesbystate` (
-  `dt` date NOT NULL,
-  `AverageTemperature` float NOT NULL,
-  `AverageTemperatureUncertainty` float NOT NULL,
-  `State` varchar(50) NOT NULL,
-  `Country` varchar(50) NOT NULL
+  `dt` date DEFAULT NULL,
+  `AverageTemperature` float DEFAULT NULL,
+  `AverageTemperatureUncertainty` float DEFAULT NULL,
+  `State` varchar(50) DEFAULT NULL,
+  `Country` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -87,15 +87,15 @@ CREATE TABLE `globallandtemperaturesbystate` (
 --
 
 CREATE TABLE `globaltemperatures` (
-  `dt` date NOT NULL,
-  `LandAverageTemperature` float NOT NULL,
-  `LandAverageTemperatureUncertainty` float NOT NULL,
-  `LandMaxTemperature` float NOT NULL,
-  `LandMaxTemperatureUncertainty` float NOT NULL,
-  `LandMinTemperature` float NOT NULL,
-  `LandMinTemperatureUncertainty` float NOT NULL,
-  `LandAndOceanAverageTemperature` float NOT NULL,
-  `LandAndOceanAverageTemperatureUncertainty` float NOT NULL
+  `dt` date DEFAULT NULL,
+  `LandAverageTemperature` float DEFAULT NULL,
+  `LandAverageTemperatureUncertainty` float DEFAULT NULL,
+  `LandMaxTemperature` float DEFAULT NULL,
+  `LandMaxTemperatureUncertainty` float DEFAULT NULL,
+  `LandMinTemperature` float DEFAULT NULL,
+  `LandMinTemperatureUncertainty` float DEFAULT NULL,
+  `LandAndOceanAverageTemperature` float DEFAULT NULL,
+  `LandAndOceanAverageTemperatureUncertainty` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
